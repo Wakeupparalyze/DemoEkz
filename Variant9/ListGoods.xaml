@@ -1,0 +1,43 @@
+﻿<Window x:Class="Variant9.ListGoods"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListGoods" Height="450" Width="800">
+    <Grid HorizontalAlignment="Left" Margin="0,0,0,390">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical">
+                <Label>Поиск</Label>
+                <TextBox x:Name="SearchBox" Background="LimeGreen" Text=""></TextBox>
+            </StackPanel>
+            <StackPanel Margin="58,0,-130,0" Grid.Column="3">
+                <Label Content="Фильтрация по производителю"/>
+                <ComboBox 
+                    ItemsSource="{Binding Creators}"
+                    SelectedItem="{Binding SelectedCreator}"
+                    DisplayMemberPath="Title">
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
+    <!--<Button Content="Add Good" Click="AddGood_Click"/>
+        <Button Content="Delete Good" Click="DeleteGood_Click"/>
+        <Button Content="Edit Good" Click="EditGood_Click"/>
+        <TextBox Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged"/>-->
+                <!--<DataGridRow. Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewRow  Header="Cost" DisplayMemberBinding="{Binding Cost}"/>
+                    <GridViewRow Header="Creator ID" DisplayMemberBinding="{Binding CreatorId}"/>
+                    <GridViewRow Header="Provider ID" DisplayMemberBinding="{Binding ProviderId}"/>
+                    <GridViewRow Header="Category ID" DisplayMemberBinding="{Binding CategoryId}"/>
+                    <GridViewRow Header="Current Sale" DisplayMemberBinding="{Binding CurrentSale}"/>
+                    <GridViewRow Header="Amount" DisplayMemberBinding="{Binding Amount}"/>-->        
